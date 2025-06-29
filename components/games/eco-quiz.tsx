@@ -147,7 +147,7 @@ export default function EcoQuiz() {
         toast({
           title: "Score Saved!",
           description: `You earned ${data.pointsEarned} sustainability points!`,
-          variant: "default",
+          variant: "success",
         })
       }
     } catch (error) {
@@ -169,7 +169,7 @@ export default function EcoQuiz() {
       toast({
         title: "Correct!",
         description: `+${points} points`,
-        variant: "default",
+        variant: "success",
       })
     } else {
       toast({

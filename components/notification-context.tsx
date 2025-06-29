@@ -38,6 +38,19 @@ export function NotificationProvider({ children }: { children: React.ReactNode }
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, closeNotification, showNotifications, setShowNotifications }}>
       {children}
+      {/* Notification Dropdown UI (if used globally) */}
+      <div className="fixed bottom-6 right-6 z-[9999] space-y-2">
+        {notifications.slice(0, 3).map((n) => (
+          <div
+            key={n.id}
+            className={`px-6 py-4 rounded-xl shadow-xl flex items-center gap-4 min-w-[220px] max-w-xs
+              ${n.type === 'success' ? 'bg-green-600 text-white' : n.type === 'error' || n.type === 'destructive' ? 'bg-red-600 text-white' : 'bg-gray-900 text-white'}`}
+          >
+            <span className="flex-1">{n.message}</span>
+            <button onClick={() => closeNotification(n.id)} className="ml-2 text-white/80 hover:text-white font-bold">×</button>
+          </div>
+        ))}
+      </div>
     </NotificationContext.Provider>
   )
 }

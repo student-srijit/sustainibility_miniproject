@@ -5,23 +5,19 @@ import { Target, Award, Globe, ArrowRight } from "lucide-react"
 export default function AboutPage() {
   const team = [
     {
-      name: "Dr. Sarah Chen",
-      role: "Environmental Scientist",
+      name: "Srijit Das",
       description: "Leading researcher in renewable energy systems with 15+ years experience.",
     },
     {
-      name: "Michael Rodriguez",
-      role: "Sustainability Educator",
+      name: "Srishankar P R",
       description: "Passionate about making sustainability education accessible to everyone.",
     },
     {
-      name: "Emma Thompson",
-      role: "UX Designer",
+      name: "Sukeerth G Kashyap",
       description: "Creating intuitive learning experiences for complex environmental topics.",
     },
     {
-      name: "David Kim",
-      role: "Data Analyst",
+      name: "T G Sanika",
       description: "Tracking environmental impact and measuring learning outcomes.",
     },
   ]
@@ -119,7 +115,6 @@ export default function AboutPage() {
                   <div className="w-24 h-24 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4" />
                   <div className="space-y-2">
                     <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                    <p className="text-green-600 font-semibold">{member.role}</p>
                     <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
                   </div>
                 </CardContent>

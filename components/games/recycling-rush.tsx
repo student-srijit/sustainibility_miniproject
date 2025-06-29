@@ -60,7 +60,7 @@ export default function RecyclingRush() {
         toast({
           title: "Score Saved!",
           description: `You earned ${data.pointsEarned} sustainability points!`,
-          variant: "default",
+          variant: "success",
         })
       }
     } catch (error) {
@@ -105,7 +105,7 @@ export default function RecyclingRush() {
         toast({
           title: "Correct!",
           description: `${item.element} goes in the ${binType} bin.`,
-          variant: "default",
+          variant: "success",
         })
       } else {
         // Wrong bin

@@ -134,7 +134,7 @@ export default function AuthForm() {
       toast({
         title: "Success!",
         description: activeTab === "login" ? "Logged in successfully" : "Account created successfully",
-        variant: "default",
+        variant: "success",
       })
 
       // Redirect to dashboard

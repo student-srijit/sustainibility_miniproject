@@ -56,7 +56,7 @@ export default function EnergyPuzzle() {
         toast({
           title: "Score Saved!",
           description: `You earned ${data.pointsEarned} sustainability points!`,
-          variant: "default",
+          variant: "success",
         })
       }
     } catch (error) {
@@ -182,11 +182,17 @@ export default function EnergyPuzzle() {
       toast({
         title: "Level Complete!",
         description: `You earned ${levelScore} points. Moving to level ${level + 1}!`,
-        variant: "default",
+        variant: "success",
       })
 
       // Generate new grid for next level
       generateGrid(level + 1)
+    } else {
+      toast({
+        title: "Level Not Completed",
+        description: "Not all paths are connected. Try again!",
+        variant: "destructive",
+      })
     }
   }
 

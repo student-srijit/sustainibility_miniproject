@@ -43,7 +43,7 @@ export function Navigation() {
           setIsAuthenticated(true)
           setUserName(data.user.name)
           // Add login notification if not already present
-          addNotification(`Welcome, ${data.user.name}! You have logged in.`, "login")
+          addNotification(`Welcome, ${data.user.name}! You have logged in.`, "success")
         }
       } catch (error) {
         setIsAuthenticated(false)

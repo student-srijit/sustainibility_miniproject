@@ -17,6 +17,7 @@ import {
   DialogDescription,
   DialogClose,
 } from "@/components/ui/dialog"
+import ReactMarkdown from 'react-markdown'
 
 export default function ToolsPage() {
   const [carbonData, setCarbonData] = useState({
@@ -297,7 +298,7 @@ export default function ToolsPage() {
                         ) : reductionTips ? (
                           <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-6 border border-green-200">
                             <div className="whitespace-pre-line text-left leading-relaxed text-gray-800">
-                              {reductionTips}
+                              <ReactMarkdown>{reductionTips}</ReactMarkdown>
                             </div>
                           </div>
                         ) : null}
